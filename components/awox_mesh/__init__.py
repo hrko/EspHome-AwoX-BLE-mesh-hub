@@ -55,11 +55,11 @@ CONFIG_SCHEMA = cv.All(
             cv.GenerateID(): cv.declare_id(Awox),
             cv.Required(CONF_MESH_NAME): cv.All(
                 cv.string_strict,
-                cv.Length(max=8),
+                cv.Length(max=16),
             ),
             cv.Required(CONF_MESH_PASSWORD): cv.All(
                 cv.string_strict,
-                cv.Length(max=8),
+                cv.Length(max=16),
             ),
             cv.Optional(CONF_ADDRESS_PREFIX): cv.string_strict,
             cv.Optional(CONF_MAX_CONNECTIONS, default=2): cv.int_range(min=1, max=MAX_CONNECTIONS),
